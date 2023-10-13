@@ -14,20 +14,20 @@ const games = [{
     gameName: "Team Fortress 2",
     gameType: "Shooter",
     goodGame: true,
-    ratings: [5, 4.5, 4.5, 4],
+    ratings: [5, 4.5, 4, 3],
 },
 {
     gameName: "Rivals of Aether",
     gameType: "Platform Fighter",
     goodGame: true,
-    ratings: [4.5, 4.5, 2, 3.5],
+    ratings: [4.5, 4, 2, 3.5],
 },
 ];
 
-games.forEach((games)=> console.log(games.gameName));
-games.forEach((games)=> {
-    const ratinglist = [games.ratings];
-    console.log(ratinglist);
-});
+games.forEach((game)=> console.log(game.gameName));
+
+games.forEach((game)=> 
+    game.ratings.forEach((rating)=> console.log(rating)));
+
 const quality = games.filter((games)=> games.goodGame === true);
 console.log(quality);
